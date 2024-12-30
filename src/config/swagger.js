@@ -12,11 +12,11 @@ export const setupSwagger = (app) => {
       },
       servers: [
         {
-          url: process.env.API_URL || 'http://localhost:3000',
+          url: process.env.PORT || 5000,
         },
       ],
     },
-    apis: ['./routes/taskRoutes.js'], // Rutas que contienen la documentación
+    apis: ['./src/routes/taskRoutes.js'], // Rutas que contienen la documentación
   };
 
   const swaggerSpec = swaggerJSDoc(swaggerOptions);
