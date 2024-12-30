@@ -12,7 +12,7 @@ export const setupSwagger = (app) => {
       },
       servers: [
         {
-          url: process.env.PORT || 5000,
+          url: process.env.API_URL || 'http://localhost:5000',
         },
       ],
     },
