@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-  origin: process.env.API_URL,
+  origin: process.env.API_URL || 5000,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type'],
 };
@@ -23,7 +23,7 @@ setupSwagger(app);
 
 app.use('/api/tasks', taskRoutes);
 
-const PORT = process.env.API_URL;
+const PORT = process.env.API_URL || 5000;
 const server = app.listen(PORT, () => {
   console.log(`Servidor corriendo en ${PORT}`);
 });
