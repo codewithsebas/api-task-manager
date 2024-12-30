@@ -2,9 +2,11 @@
   "name": "api-task-manager",
   "version": "1.0.0",
   "description": "task manager",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "jest --verbose --silent",
+    "test:watch": "npm run test -- --watch"
   },
   "type": "module",
   "author": "sebastian",
@@ -18,5 +20,12 @@
     "mongoose": "^8.9.2",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
   }
 }

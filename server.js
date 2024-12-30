@@ -1,19 +1,32 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import { connectDB } from './config/db.js';
-import { setupSwagger } from './config/swagger.js';
-import taskRoutes from './routes/taskRoutes.js';
+import cors from 'cors';
+import { connectDB } from './src/config/db.js';
+import { setupSwagger } from './src/config/swagger.js';
+import taskRoutes from './src/routes/taskRoutes.js';
 
 dotenv.config();
 const app = express();
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 
-// Conectar a la base de datos
 connectDB();
-
-// Configuración de Swagger
 setupSwagger(app);
+
 app.use('/api/tasks', taskRoutes);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {});
+const PORT = process.env.PORT || 5000;
+const server = app.listen(PORT, () => {
+  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+});
+
+// Exporta `app` y `server` por separado
+export { app, server };
