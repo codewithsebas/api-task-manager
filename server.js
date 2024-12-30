@@ -8,13 +8,7 @@ import taskRoutes from './src/routes/taskRoutes.js';
 dotenv.config();
 const app = express();
 
-const corsOptions = {
-  origin: process.env.PORT || 5000,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type'],
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
