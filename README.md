@@ -59,6 +59,8 @@ http://localhost:5000/api-docs/
 
 ## Recursos utilizados
 
+Render: Para el deploy
+
 Node.js: Plataforma principal para la ejecución del backend.
 
 Express.js: Framework minimalista para la creación de aplicaciones web y APIs.
