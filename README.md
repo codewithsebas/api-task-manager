@@ -2,6 +2,18 @@
 
 Task Manager API es una aplicación backend diseñada para gestionar tareas. Esta API permite crear, leer, actualizar y eliminar tareas, además de ofrecer una documentación clara mediante Swagger.
 
+### Deploy API
+
+```bash
+https://api-task-manager-9xyj.onrender.com/api/tasks
+```
+
+### Documentación API
+
+```bash
+https://api-task-manager-9xyj.onrender.com/api-docs/
+```
+
 ## Requisitos Previos
 
 - **Node.js** v18 o superior
@@ -12,14 +24,14 @@ Task Manager API es una aplicación backend diseñada para gestionar tareas. Est
 
 **Clona el repositorio**:
 ```bash
-   git clone https://github.com/codewithsebas/api-task-manager.git
-   cd api-task-manager
+git clone https://github.com/codewithsebas/api-task-manager.git
+cd api-task-manager
 ```
 
 **Instala las dependencias**:
 
 ```bash
-   npm install
+npm install
 ```
 
 **Configura las variables de entorno**:
@@ -27,8 +39,8 @@ Task Manager API es una aplicación backend diseñada para gestionar tareas. Est
 Crea un archivo .env en el directorio raíz con el siguiente contenido:
 
 ```bash
-    MONGO_URI=tu_uri_de_mongodb
-    PORT=3000
+MONGO_URI=tu_uri_de_mongodb
+PORT=3000
 ```
 
 Reemplaza tu_uri_de_mongodb con tu cadena de conexión a MongoDB (local o Atlas).
@@ -37,18 +49,12 @@ Reemplaza tu_uri_de_mongodb con tu cadena de conexión a MongoDB (local o Atlas)
 
 
 ```bash
-    npm start
+npm start
 ```
 
 **Ruta de Documentación de la API**:
-Local
 ```bash
-    http://localhost:5000/api-docs/
-```
-
-Production
-```bash
-   https://api-task-manager-9xyj.onrender.com/api-docs/
+http://localhost:5000/api-docs/
 ```
 
 ## Recursos utilizados
